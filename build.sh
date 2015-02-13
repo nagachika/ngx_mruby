@@ -16,7 +16,7 @@ set -e
 if [ "$NGINX_CONFIG_OPT_ENV" != "" ]; then
     NGINX_CONFIG_OPT=$NGINX_CONFIG_OPT_ENV
 else
-    NGINX_CONFIG_OPT='--prefix='`pwd`'/build/nginx --with-http_stub_status_module'
+    NGINX_CONFIG_OPT='--prefix='`pwd`'/build/nginx --with-http_stub_status_module --with-http_ssl_module'
 fi
 
 echo "apxs="$APXS_PATH "apachectl="$APACHECTL_PATH
